@@ -3,7 +3,6 @@ import { StyleSheet, View, ScrollView } from 'react-native';
 import { Text, List, Switch, Button, Divider, useTheme, MD3Theme, Snackbar } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSettings } from '../src/hooks/useSettings';
-import { CountryPicker } from '../src/components/settings/CountryPicker';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { cacheStorage } from '../src/services/cache/storage';
 import { useNotifications } from '../src/hooks/useNotifications';
@@ -67,11 +66,6 @@ export default function SettingsScreen() {
         <List.Section>
           <List.Subheader>Preferences</List.Subheader>
           
-          <CountryPicker
-            value={settings.country}
-            onChange={(country) => updateSettings({ country })}
-          />
-
           <List.Item
             title="Dark Mode"
             left={props => <List.Icon {...props} icon="theme-light-dark" />}

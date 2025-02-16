@@ -107,7 +107,9 @@ export default function MovieDetailsScreen() {
           <Text style={styles.overview}>{movie.overview}</Text>
 
           <Text style={styles.sectionTitle}>Where to Watch</Text>
-          {providers && <StreamingProviders providers={providers} />}
+          {providers && (
+            <StreamingProviders providers={providers} />
+          )}
 
           {credits && <MovieCredits credits={credits} />}
         </View>

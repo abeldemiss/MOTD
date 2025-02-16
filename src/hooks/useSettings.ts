@@ -3,12 +3,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface Settings {
   darkMode: boolean;
-  country: string;
 }
 
 const DEFAULT_SETTINGS: Settings = {
   darkMode: false,
-  country: 'US',
 };
 
 const STORAGE_KEY = 'motd:settings';

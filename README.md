@@ -46,9 +46,28 @@ A mobile app that suggests a different movie each day, providing details, stream
 
 ## Features
 
-- Daily movie suggestions
-- Detailed movie information
-- Streaming availability
-- Fun facts about each movie
+### Core Features
+- Daily curated movie suggestions
+- Detailed movie information and metadata
+- US streaming availability through JustWatch integration
+- Engaging movie fun facts
+- Movie archive to browse past suggestions
+
+### User Experience
+- Modern, intuitive interface
 - Dark mode support
-- Movie archive
+- Daily notifications (optional)
+- Offline support with caching
+- Smooth animations and transitions
+
+### Technical Details
+- Built with Expo and React Native
+- Uses TMDB API for movie data
+- Supabase backend for data persistence
+- TypeScript for type safety
+- Follows Material Design 3 guidelines
+
+## Notes
+- Streaming availability information is currently limited to the United States
+- The app requires an active internet connection for fetching new movies and streaming information
+- Some features may require enabling notifications on your device

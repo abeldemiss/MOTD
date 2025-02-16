@@ -1,18 +1,16 @@
 import React from 'react';
 import { StyleSheet, View, Image, Linking, ScrollView } from 'react-native';
 import { Text, Button } from 'react-native-paper';
-import type { WatchProviders } from '../../services/tmdb/types';
+import type { WatchProviders, Provider } from '../../services/tmdb/types';
 
 interface StreamingProvidersProps {
   providers: WatchProviders;
-  countryCode?: string;
 }
 
 export const StreamingProviders = ({ 
-  providers, 
-  countryCode = 'US' 
+  providers
 }: StreamingProvidersProps) => {
-  const countryProviders = providers.results[countryCode];
+  const countryProviders = providers.results['US'];
   
   if (!countryProviders) {
     return (
