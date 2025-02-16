@@ -60,50 +60,58 @@ const makeStyles = (theme: MD3Theme) => StyleSheet.create({
   cardContainer: {
     ...theme.dark 
       ? {
-          // Glow effect for dark mode
           shadowColor: theme.colors.primary,
           shadowOffset: { width: 0, height: 0 },
           shadowOpacity: 0.3,
-          shadowRadius: 12,
+          shadowRadius: 16,
           elevation: 8,
         }
       : {
-          // Dramatic drop shadow for light mode
           shadowColor: '#000000',
           shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: 0.15,
+          shadowOpacity: 0.12,
           shadowRadius: 24,
           elevation: 16,
         }
   },
   card: {
     backgroundColor: theme.dark ? theme.colors.surface : theme.colors.background,
-    borderRadius: 12,
+    borderRadius: 16,
     overflow: 'hidden',
     borderWidth: theme.dark ? 1 : 0,
     borderColor: theme.dark ? `${theme.colors.primary}20` : 'transparent',
   },
   touchable: {
-    borderRadius: 12,
+    borderRadius: 16,
   },
   poster: {
     width: '100%',
-    height: 250,
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
+    height: 420,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
   },
   content: {
-    padding: 16,
+    padding: 20,
   },
   title: {
-    marginBottom: 4,
+    fontSize: 24,
+    fontWeight: '600',
+    marginBottom: 6,
     color: theme.colors.onSurface,
+    letterSpacing: 0.25,
+    lineHeight: 32,
   },
   date: {
-    marginBottom: 8,
+    fontSize: 17,
+    marginBottom: 12,
     color: theme.colors.onSurfaceVariant,
+    letterSpacing: 0.15,
+    lineHeight: 24,
   },
   overview: {
+    fontSize: 15,
+    lineHeight: 22,
     color: theme.colors.onSurfaceVariant,
+    letterSpacing: 0.25,
   },
 }); 

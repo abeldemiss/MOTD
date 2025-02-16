@@ -67,7 +67,7 @@ export default function HomeScreen() {
               month: 'long',
               day: 'numeric',
               year: 'numeric'
-            }).replace(',', '')}
+            })}
           </Text>
         </View>
         <View style={styles.cardContainer}>
@@ -110,28 +110,30 @@ const makeStyles = (theme: MD3Theme) => StyleSheet.create({
     backgroundColor: theme.colors.background,
   },
   header: {
-    paddingHorizontal: 16,
-    paddingTop: 24,
-    paddingBottom: 16,
+    paddingHorizontal: 24,
+    paddingTop: 32,
+    paddingBottom: 24,
     backgroundColor: theme.colors.background,
   },
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: 32,
+    fontWeight: '700',
     textAlign: 'center',
     color: theme.colors.onBackground,
-    lineHeight: 28,
+    lineHeight: 40,
+    letterSpacing: 0.5,
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 16,
     textAlign: 'center',
     color: theme.colors.onSurfaceVariant,
     marginTop: 8,
-    lineHeight: 18,
+    lineHeight: 22,
+    letterSpacing: 0.15,
   },
   scrollContent: {
     flexGrow: 1,
-    paddingBottom: 24,
+    paddingBottom: 32,
   },
   centerContainer: {
     flex: 1,
@@ -141,19 +143,26 @@ const makeStyles = (theme: MD3Theme) => StyleSheet.create({
   },
   cardContainer: {
     paddingHorizontal: 24,
-    paddingTop: 16,
+    paddingTop: 8,
   },
   additionalInfo: {
-    padding: 16,
+    padding: 20,
     marginHorizontal: 24,
-    marginTop: 24,
+    marginTop: 32,
     backgroundColor: theme.colors.surfaceVariant,
-    borderRadius: 8,
+    borderRadius: 16,
+    elevation: 1,
+    shadowColor: theme.dark ? theme.colors.primary : '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: theme.dark ? 0.3 : 0.1,
+    shadowRadius: 8,
   },
   infoText: {
-    fontSize: 14,
-    marginVertical: 4,
+    fontSize: 15,
+    marginVertical: 6,
     color: theme.colors.onSurfaceVariant,
+    lineHeight: 22,
+    letterSpacing: 0.25,
   },
   errorText: {
     fontSize: 16,
@@ -166,20 +175,22 @@ const makeStyles = (theme: MD3Theme) => StyleSheet.create({
     justifyContent: 'center',
   },
   funFactContainer: {
-    marginTop: 12,
-    paddingTop: 12,
+    marginTop: 16,
+    paddingTop: 16,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: theme.colors.outline,
   },
   funFactLabel: {
-    fontSize: 14,
-    fontWeight: 'bold',
+    fontSize: 16,
+    fontWeight: '600',
     color: theme.colors.primary,
-    marginBottom: 4,
+    marginBottom: 8,
+    letterSpacing: 0.15,
   },
   funFactText: {
-    fontSize: 14,
+    fontSize: 15,
     color: theme.colors.onSurfaceVariant,
-    lineHeight: 20,
+    lineHeight: 22,
+    letterSpacing: 0.25,
   },
 }); 
