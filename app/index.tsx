@@ -57,6 +57,19 @@ export default function HomeScreen() {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
+        <View style={styles.header}>
+          <Text variant="headlineLarge" style={styles.title}>
+            Movie of the Day
+          </Text>
+          <Text variant="bodyMedium" style={styles.subtitle}>
+            {new Date().toLocaleDateString('en-US', {
+              weekday: 'long',
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric'
+            }).replace(',', '')}
+          </Text>
+        </View>
         <View style={styles.cardContainer}>
           <MovieCard 
             movie={movie} 
@@ -85,20 +98,7 @@ export default function HomeScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text variant="headlineLarge" style={styles.title}>
-          Movie of the Day
-        </Text>
-        <Text variant="bodyMedium" style={styles.subtitle}>
-          {new Date().toLocaleDateString(undefined, {
-            weekday: 'long',
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-          })}
-        </Text>
-      </View>
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       {renderContent()}
     </SafeAreaView>
   );
@@ -111,10 +111,9 @@ const makeStyles = (theme: MD3Theme) => StyleSheet.create({
   },
   header: {
     paddingHorizontal: 16,
-    paddingTop: 0,
-    paddingBottom: 4,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: theme.colors.outline,
+    paddingTop: 24,
+    paddingBottom: 16,
+    backgroundColor: theme.colors.background,
   },
   title: {
     fontSize: 24,
@@ -127,7 +126,7 @@ const makeStyles = (theme: MD3Theme) => StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     color: theme.colors.onSurfaceVariant,
-    marginTop: 0,
+    marginTop: 8,
     lineHeight: 18,
   },
   scrollContent: {

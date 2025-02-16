@@ -64,7 +64,7 @@ export default function MovieDetailsScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <ScrollView>
         <Image
           source={{ 
